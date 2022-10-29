@@ -1,0 +1,36 @@
+{
+  "name": "@withtypes/fs-extra",
+  "version": "0.1.0",
+  "description": "Fs-extra with types.",
+  "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/chengpeiquan/withtypes/packages/fs-extra",
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/index.min.js",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengpeiquan/withtypes.git"
+  },
+  "keywords": [
+    "utils",
+    "fs",
+    "fs-extra"
+  ],
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
+  }
+}
