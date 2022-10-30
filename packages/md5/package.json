@@ -4,7 +4,7 @@
   "description": "MD5 with types.",
   "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
   "license": "MIT",
-  "homepage": "https://github.com/chengpeiquan/withtypes/packages/md5",
+  "homepage": "https://github.com/chengpeiquan/withtypes/tree/main/packages/md5",
   "files": [
     "lib"
   ],
