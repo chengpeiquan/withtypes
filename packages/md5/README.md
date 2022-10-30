@@ -39,6 +39,8 @@ This package does not have its own function implementation, Just replace the pac
 So it is exactly the same APIs as the original package in use.
 
 ```ts
+import md5 from '@withtypes/md5'
+
 const before = 'Hello World'
 const after = md5(before)
 console.log({ before, after })
