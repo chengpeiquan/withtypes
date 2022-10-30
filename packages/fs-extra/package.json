@@ -1,7 +1,7 @@
 {
   "name": "@withtypes/fs-extra",
   "version": "0.1.0",
-  "description": "Fs-extra with types.",
+  "description": "FS-Extra with types.",
   "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
   "license": "MIT",
   "homepage": "https://github.com/chengpeiquan/withtypes/tree/main/packages/fs-extra",
@@ -29,8 +29,5 @@
   ],
   "dependencies": {
     "fs-extra": "^10.1.0"
-  },
-  "devDependencies": {
-    "@types/fs-extra": "^9.0.13"
   }
 }
