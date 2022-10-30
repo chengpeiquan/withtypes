@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "tsx scripts/build"
+    "build": "tsx scripts/build",
+    "release": "tsx scripts/release"
   },
   "dependencies": {
     "fs-extra": "^10.1.0",
