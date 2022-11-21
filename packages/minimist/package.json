@@ -1,21 +1,22 @@
 {
   "name": "@withtypes/minimist",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Minimist with types.",
   "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
   "license": "MIT",
   "homepage": "https://github.com/chengpeiquan/withtypes/tree/main/packages/minimist",
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "main": "./lib/index.min.js",
   "module": "./lib/index.mjs",
-  "types": "./lib/index.d.ts",
+  "types": "./types/index.d.ts",
   "exports": {
     ".": {
       "import": "./lib/index.mjs",
       "require": "./lib/index.cjs",
-      "types": "./lib/index.d.js"
+      "types": "./types/index.d.js"
     }
   },
   "repository": {

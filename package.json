@@ -9,7 +9,10 @@
     "build": "tsx scripts/build",
     "release": "tsx scripts/release",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "mirror:get": "npm config get registry",
+    "mirror:set": "npm config set registry https://registry.npmmirror.com",
+    "mirror:rm": "npm config rm registry"
   },
   "dependencies": {
     "fs-extra": "^10.1.0",
