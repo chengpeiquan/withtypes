@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "build": "tsx scripts/build",
+    "build:all": "tsx scripts/build/all",
     "release": "tsx scripts/release",
     "test": "vitest",
     "coverage": "vitest run --coverage",
