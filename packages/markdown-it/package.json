@@ -1,6 +1,6 @@
 {
   "name": "@withtypes/markdown-it",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Markdown-It with types.",
   "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
   "license": "MIT",

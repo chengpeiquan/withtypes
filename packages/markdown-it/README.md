@@ -1,8 +1,8 @@
-# @withtypes/md5
+# @withtypes/markdown-it
 
-MD5 with types.
+Markdown-It with types.
 
-Merged [md5](https://www.npmjs.com/package/md5) and [@types/md5](https://www.npmjs.com/package/@types/md5) , install this package to get both, no other features.
+Merged [markdown-it](https://www.npmjs.com/package/markdown-it) and [@types/markdown-it](https://www.npmjs.com/package/@types/markdown-it) , install this package to get both, no other features.
 
 ## Why?
 
@@ -16,15 +16,15 @@ Install the package from npm (or yarn, or pnpm).
 
 ```bash
 # Just install this package
-npm i @withtypes/md5
+npm i @withtypes/markdown-it
 ```
 
 This replaces the original problem of needing to install twice:
 
 ```bash
 # No need to install this now
-npm i md5
-npm i -D @types/md5
+npm i markdown-it
+npm i -D @types/markdown-it
 ```
 
 ## Usage
@@ -32,24 +32,24 @@ npm i -D @types/md5
 This package does not have its own function implementation, Just replace the package name in the `import` statement.
 
 ```diff
--import md5 from 'md5'
-+import md5 from '@withtypes/md5'
+-import MarkdownIt from 'markdown-it'
++import MarkdownIt from '@withtypes/markdown-it'
 ```
 
 So it is exactly the same APIs as the original package in use.
 
 ```ts
-import md5 from '@withtypes/md5'
+import MarkdownIt from '@withtypes/markdown-it'
 
-const before = 'Hello World'
-const after = md5(before)
-console.log({ before, after })
-// { before: 'Hello World', after: 'b10a8db164e0754105b7a99be72e3fe5' }
+const md = new MarkdownIt()
+const html = md.render('# Hello World')
+console.log(html)
+// <h1>Hello World</h1>
 ```
 
 ## Documentation
 
-See: [Documentation of MD5](https://github.com/pvorb/node-md5#readme)
+See: [Documentation of Markdown-It](https://github.com/markdown-it/markdown-it#readme)
 
 ## License
 
