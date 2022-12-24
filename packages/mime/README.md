@@ -48,6 +48,22 @@ const extension = mime.getExtension('text/plain')
 console.log(extension) // txt
 ```
 
+When using the following two import methods in TypeScript, please ensure that the `compilerOptions.moduleResolution` of tsconfig.json is `NodeNext` .
+
+Lite: 
+
+```diff
+-import mimelite from 'mime/lite'
++import mimelite from '@withtypes/mime/lite'
+```
+
+Mime: 
+
+```diff
+-import Mime from 'mime/Mime'
++import Mime from '@withtypes/mime/Mime'
+```
+
 ## Documentation
 
 See: [Documentation of MIME](https://github.com/broofa/mime#readme)

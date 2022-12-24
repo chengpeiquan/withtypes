@@ -1,8 +1,10 @@
 import {
   copyFileSync,
+  existsSync,
   mkdirSync,
   readdirSync,
   readFileSync,
+  readJsonSync,
   rmdirSync,
   statSync,
   unlinkSync,
@@ -96,4 +98,16 @@ export function copyDir(srcDir: string, destDir: string): void {
     const destFile = resolve(destDir, file)
     copy(srcFile, destFile)
   }
+}
+
+/**
+ * Get special build configuration
+ */
+export function readBuildConfig(rootPath: string, name: string) {
+  const buildConfigFile = resolve(rootPath, `./packages/${name}/build.json`)
+  if (existsSync(buildConfigFile)) {
+    const buildConfig = readJsonSync(buildConfigFile)
+    return buildConfig
+  }
+  return {}
 }

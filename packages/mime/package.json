@@ -1,6 +1,6 @@
 {
   "name": "@withtypes/mime",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "MIME with types.",
   "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
   "license": "MIT",
@@ -16,7 +16,17 @@
     ".": {
       "import": "./lib/index.mjs",
       "require": "./lib/index.cjs",
-      "types": "./types/index.d.js"
+      "types": "./types/index.d.ts"
+    },
+    "./lite": {
+      "import": "./lib/lite.mjs",
+      "require": "./lib/lite.cjs",
+      "types": "./types/lite.d.ts"
+    },
+    "./Mime": {
+      "import": "./lib/Mime.mjs",
+      "require": "./lib/Mime.cjs",
+      "types": "./types/Mime.d.ts"
     }
   },
   "repository": {

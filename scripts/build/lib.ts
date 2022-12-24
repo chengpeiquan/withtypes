@@ -8,46 +8,58 @@ import type { BuildOptions } from './types'
  * Build options provided to `vite.config.ts`
  * @see https://vitejs.dev/config/
  */
-function viteConfig({ name, rootPath }: BuildOptions): UserConfig {
+function viteConfig({ name, rootPath, entryFile }: BuildOptions): UserConfig {
   const basePath = resolve(rootPath, `./packages/${name}`)
   const outDir = resolve(basePath, `./lib`)
   const pkg = parsePackage(basePath)
+  const deps = Object.keys(pkg.dependencies || {})
+  const fileName = entryFile ? entryFile : 'index'
 
   return {
     build: {
       outDir,
+      emptyOutDir: !Boolean(entryFile),
       lib: {
-        entry: resolve(basePath, './index.ts'),
+        entry: resolve(basePath, `./${fileName}.ts`),
         name: capitalize(name),
         formats: ['umd', 'cjs', 'es'],
         fileName: (format) => {
           switch (format) {
             case 'umd':
-              return 'index.min.js'
+              return `${fileName}.min.js`
             case 'cjs':
-              return 'index.cjs'
+              return `${fileName}.cjs`
             case 'es':
-              return 'index.mjs'
+              return `${fileName}.mjs`
             default:
-              return 'index.js'
+              return `${fileName}.js`
           }
         },
       },
       minify: true,
       sourcemap: false,
       rollupOptions: {
-        external: Object.keys(pkg.dependencies),
+        external: deps,
         output: {
           globals: (name) => capitalize(name),
         },
       },
     },
     resolve: {
-      dedupe: Object.keys(pkg.dependencies),
+      dedupe: deps,
     },
     plugins: [
       banner({
-        content: `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * description: ${pkg.description}\n * author: ${pkg.author}\n * homepage: ${pkg.homepage}\n */`,
+        content: [
+          `/**`,
+          ` * name: ${pkg.name}`,
+          ` * version: v${pkg.version}`,
+          ` * description: ${pkg.description}`,
+          ` * author: ${pkg.author}`,
+          ` * homepage: ${pkg.homepage}`,
+          ` * license: ${pkg.license}`,
+          ` */`,
+        ].join('\n'),
         outDir,
         debug: true,
       }),

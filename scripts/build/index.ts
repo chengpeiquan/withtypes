@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { buildLibrary } from './lib'
 import { buildTypes } from './dts'
 import { specialPackages, rewriteEntryFile } from './sync'
-import { getArgv } from '../utils'
+import { getArgv, readBuildConfig } from '../utils'
 
 async function run() {
   const { name } = getArgv()
@@ -12,7 +12,24 @@ async function run() {
   if (specialPackages.includes(name)) {
     await rewriteEntryFile(options)
   }
-  await buildLibrary(options)
+
+  const { entryFiles } = readBuildConfig(rootPath, name)
+
+  // Build multiple entry files
+  if (Array.isArray(entryFiles)) {
+    for (let i = 0; i < entryFiles.length; i++) {
+      const entryFile = entryFiles[i]
+      await buildLibrary({
+        ...options,
+        entryFile,
+      })
+    }
+  }
+  // Only build the `index` files
+  else {
+    await buildLibrary(options)
+  }
+
   await buildTypes(options)
 }
 run().catch((e) => {
