@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@bassist/utils': ^0.4.0
       '@types/fs-extra': ^9.0.13
       '@types/markdown-it': ^12.2.3
       '@types/md5': ^2.3.2
@@ -30,6 +31,7 @@ importers:
       minimist: 1.2.7
       prompts: 2.4.2
     devDependencies:
+      '@bassist/utils': 0.4.0
       '@types/fs-extra': 9.0.13
       '@types/markdown-it': 12.2.3
       '@types/md5': 2.3.2
@@ -74,6 +76,12 @@ importers:
       prompts: 2.4.2
 
 packages:
+
+  /@bassist/utils/0.4.0:
+    resolution: {integrity: sha512-aoFTl0jUjm8/tDZodP41wnEkvB+C5O9NFCuYN/ztL6jSUSsuBkXq90/1ifBm1XhV/zySHgLYlU1+tgo3XtQ+nA==}
+    dependencies:
+      '@withtypes/mime': 0.1.2
+    dev: true
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
@@ -213,6 +221,12 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /@withtypes/mime/0.1.2:
+    resolution: {integrity: sha512-PB9BfZGzwblUONJY0LiOwsHCA6uV3DIPj/w9ReekdHxPOl0VdUFgI5s4avKycuuq9Gf5Nz2ZPA2O36GAUzlMPA==}
+    dependencies:
+      mime: 3.0.0
     dev: true
 
   /acorn/8.8.1:
@@ -787,7 +801,6 @@ packages:
     resolution: {integrity: sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==}
     engines: {node: '>=10.0.0'}
     hasBin: true
-    dev: false
 
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
