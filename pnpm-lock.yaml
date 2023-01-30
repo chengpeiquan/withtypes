@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@bassist/utils': ^0.4.0
+      '@types/figlet': ^1.5.5
       '@types/fs-extra': ^9.0.13
       '@types/markdown-it': ^12.2.3
       '@types/md5': ^2.3.2
@@ -13,6 +14,7 @@ importers:
       '@types/node': ^18.11.7
       '@types/prompts': ^2.4.1
       '@vitest/coverage-c8': ^0.24.3
+      figlet: ^1.5.2
       fs-extra: ^10.1.0
       markdown-it: ^13.0.1
       md5: ^2.3.0
@@ -24,6 +26,7 @@ importers:
       vite-plugin-banner: ^0.7.0
       vitest: ^0.24.3
     dependencies:
+      figlet: 1.5.2
       fs-extra: 10.1.0
       markdown-it: 13.0.1
       md5: 2.3.0
@@ -32,6 +35,7 @@ importers:
       prompts: 2.4.2
     devDependencies:
       '@bassist/utils': 0.4.0
+      '@types/figlet': 1.5.5
       '@types/fs-extra': 9.0.13
       '@types/markdown-it': 12.2.3
       '@types/md5': 2.3.2
@@ -155,6 +159,10 @@ packages:
 
   /@types/chai/4.3.3:
     resolution: {integrity: sha512-hC7OMnszpxhZPduX+m+nrx+uFoLkWOMiR4oa/AZF3MuSETYTZmFfJAHqZEM8MVlvfG7BEUcgvtwoCTxBp6hm3g==}
+    dev: true
+
+  /@types/figlet/1.5.5:
+    resolution: {integrity: sha512-0sMBeFoqdGgdXoR/hgKYSWMpFufSpToosNsI2VgmkPqZJgeEXsXNu2hGr0FN401dBro2tNO5y2D6uw3UxVaxbg==}
     dev: true
 
   /@types/fs-extra/9.0.13:
@@ -592,6 +600,11 @@ packages:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
     engines: {node: '>=6'}
     dev: true
+
+  /figlet/1.5.2:
+    resolution: {integrity: sha512-WOn21V8AhyE1QqVfPIVxe3tupJacq1xGkPTB4iagT6o+P2cAgEOOwIxMftr4+ZCTI6d551ij9j61DFr0nsP2uQ==}
+    engines: {node: '>= 0.4.0'}
+    dev: false
 
   /find-up/5.0.0:
     resolution: {integrity: sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==}

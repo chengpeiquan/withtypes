@@ -1,0 +1,33 @@
+{
+  "name": "@withtypes/figlet",
+  "version": "0.1.0",
+  "description": "Figlet with types.",
+  "author": "chengpeiquan <chengpeiquan@chengpeiquan.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/chengpeiquan/withtypes/tree/main/packages/figlet",
+  "files": [
+    "lib",
+    "types"
+  ],
+  "main": "./lib/index.min.js",
+  "module": "./lib/index.mjs",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./types/index.d.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chengpeiquan/withtypes.git"
+  },
+  "keywords": [
+    "utils",
+    "figlet"
+  ],
+  "dependencies": {
+    "figlet": "^1.5.2"
+  }
+}
